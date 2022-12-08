@@ -1,6 +1,7 @@
-# SAGE
-This is the official PyTorch implementation of "SAGE: Saliency-Guided Mixup with Optimal Rearrangements" accepted at BMVC'20 ([paper](https://arxiv.org/abs/2211.00113), [talk](https://bmvc2022.mpi-inf.mpg.de/0484_video.mp4),[poster](https://bmvc2022.mpi-inf.mpg.de/0484_poster.pdf)). Some parts of the codes are borrowed from Puzzle Mix ([link](https://github.com/snu-mllab/PuzzleMix)).
-We also provide implementations for training with mixup and its variants, in particular the ones that leverage input saliency in the mixup process.
+# SAGE: Saliency-Guided Mixup with Optimal Rearrangements
+This is the official PyTorch implementation of "SAGE: Saliency-Guided Mixup with Optimal Rearrangements" accepted at BMVC'20 ([paper](https://arxiv.org/abs/2211.00113), [talk](https://bmvc2022.mpi-inf.mpg.de/0484_video.mp4), [poster](https://bmvc2022.mpi-inf.mpg.de/0484_poster.pdf)). Some parts of the codes are borrowed from Puzzle Mix ([link](https://github.com/snu-mllab/PuzzleMix)).  
+We also provide implementations for training with mixup and its variants, in particular the ones that leverage input saliency in the data augmentation process: [Mixup](https://arxiv.org/abs/1710.09412), [SaliencyMix](https://arxiv.org/abs/2006.01791), [Manifold Mixup](https://arxiv.org/abs/1806.05236), [CutMix](https://arxiv.org/abs/1905.04899), [Puzzle Mix](https://arxiv.org/abs/2009.06962) and [Co-Mixup](https://openreview.net/forum?id=gvxJzw8kW4b).
+
 
 ![Comparing SAGE with other data augmentation methods](figures/comparison.png)
 
@@ -49,7 +50,7 @@ python3 main.py --dataset cifar100 --data_dir [data_path] --root_dir [save_path]
 ```
 
 ## Reproducing baselines
-We follow the hyper-parameter configurations described in Co-Mixup to reproduce the baseline results, simply replace [baseline_method] with ```vanilla```, ```saliencymix```[paper](https://arxiv.org/abs/2006.01791), ```input```[paper](https://arxiv.org/abs/1710.09412), ```manifold```[paper](https://arxiv.org/abs/1806.05236), ```cutmix```[paper](https://arxiv.org/abs/1905.04899) and ```puzzle```[paper](https://arxiv.org/abs/2009.06962).
+We follow the hyper-parameter configurations described in Co-Mixup to reproduce the baseline results, simply replace [baseline_method] with ```vanilla```, ```saliencymix```, ```input```, ```manifold```, ```cutmix```, ```puzzle``` and ```comix```.
 Options of ```arch```: ```preactresnet18```, ```resnext29_4_24``` and ```wrn16_8```.
 
 ### CIFAR-10
@@ -61,8 +62,6 @@ python3 main.py --dataset cifar10 --data_dir [data_path] --root_dir [save_path] 
 ```
 python3 main.py --dataset cifar100 --data_dir [data_path] --root_dir [save_path] --labels_per_class 500 --arch [arch] --learning_rate 0.2 --momentum 0.9 --decay 0.0001 --epochs 300 --schedule 100 200 --gammas 0.1 0.1 --method [baseline_method] 
 ```
-
-To reproduce Co-mixup, run ```python3 co-mixup/main.py``` followed by other parameters.
 
 ## License
 MIT License
