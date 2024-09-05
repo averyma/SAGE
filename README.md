@@ -1,5 +1,5 @@
 # SAGE: Saliency-Guided Mixup with Optimal Rearrangements
-This is the official PyTorch implementation of "SAGE: Saliency-Guided Mixup with Optimal Rearrangements" accepted at BMVC'20 ([paper](https://arxiv.org/abs/2211.00113), [talk](https://bmvc2022.mpi-inf.mpg.de/0484_video.mp4), [poster](https://bmvc2022.mpi-inf.mpg.de/0484_poster.pdf)). Some parts of the codes are borrowed from Puzzle Mix ([link](https://github.com/snu-mllab/PuzzleMix)).  
+This is the official PyTorch implementation of "SAGE: Saliency-Guided Mixup with Optimal Rearrangements" accepted at BMVC'22 ([paper](https://arxiv.org/abs/2211.00113), [talk](https://bmvc2022.mpi-inf.mpg.de/0484_video.mp4), [poster](https://bmvc2022.mpi-inf.mpg.de/0484_poster.pdf)). Some parts of the codes are borrowed from Puzzle Mix ([link](https://github.com/snu-mllab/PuzzleMix)).  
 We also provide implementations for training with mixup and its variants, in particular the ones that leverage input saliency in the data augmentation process: [Mixup](https://arxiv.org/abs/1710.09412), [SaliencyMix](https://arxiv.org/abs/2006.01791), [Manifold Mixup](https://arxiv.org/abs/1806.05236), [CutMix](https://arxiv.org/abs/1905.04899), [Puzzle Mix](https://arxiv.org/abs/2009.06962) and [Co-Mixup](https://openreview.net/forum?id=gvxJzw8kW4b).
 
 
